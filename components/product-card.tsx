@@ -11,8 +11,14 @@ import { Product } from '@/types/product';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipTrigger,
+} from '@/components/ui/tooltip';
 import Image from 'next/image';
 import { FavoriteButton } from '@/components/favorite-button';
+import { InfoIcon } from 'lucide-react';
 
 type Props = {
   product: Product;
@@ -71,7 +77,9 @@ export function ProductCard({ product }: Props) {
       <CardContent className="flex flex-col h-full p-4 space-y-4">
         <div>
           {product.category?.map((cat) => (
-            <Badge key={cat} variant="secondary">{cat}</Badge>
+            <Badge key={cat} variant="secondary">
+              {cat}
+            </Badge>
           ))}
           <Link href={`/products/${product.slug}`}>
             <h2 className="text-lg font-semibold hover:underline truncate">
@@ -84,7 +92,21 @@ export function ProductCard({ product }: Props) {
           </p>
         </div>
 
-        <p className="text-2xl font-bold">{formatPrice(product.price)}</p>
+        <div className="flex items-center gap-3">
+          <p className="text-2xl font-bold">{formatPrice(product.price)}</p>
+
+          <Tooltip>
+            <TooltipTrigger>
+              <InfoIcon className="size-4" />
+            </TooltipTrigger>
+            <TooltipContent>
+              <p>
+                Para reservar qualquer produto, será cobrado um valor de 20% do
+                preço (sem reembolso).
+              </p>
+            </TooltipContent>
+          </Tooltip>
+        </div>
 
         {isUnavailable ? (
           <p className="text-sm text-muted-foreground">Indisponível</p>
@@ -95,7 +117,9 @@ export function ProductCard({ product }: Props) {
               {formatDate(product.availableDate)}
             </span>
           </p>
-        ) : <p className="text-sm">Reserve antes que seja tarde demais</p>}
+        ) : (
+          <p className="text-sm">Reserve antes que seja tarde demais</p>
+        )}
 
         <div className="w-full mt-auto">
           <Button
