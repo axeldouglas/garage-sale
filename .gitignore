@@ -40,5 +40,13 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
+# python cache
+__pycache__/
+*.pyc
+
 # local data exports
 /data/data.csv
+
+# local oauth secrets (outside repo preferred, but ignore in case user keeps local copies)
+/scripts/google-oauth-client.json
+/scripts/google-oauth-token.json
