@@ -256,8 +256,8 @@ export const products: Product[] = [
       'Produto em ótimo estado e funcionando perfeitamente. Precisa de trocar bateria.',
     price: 100.0,
     images: [
-      '/products/relogio-chilie-beens/1.jpg',
       '/products/relogio-chilie-beens/2.jpg',
+      '/products/relogio-chilie-beens/1.jpg',
     ],
     status: 'available',
     quantity: 1,
