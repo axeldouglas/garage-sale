@@ -2,9 +2,15 @@ import { products } from '@/data/products';
 
 import { ProductsGrid } from '@/components/products-grid';
 
-export default function HomePage() {
+type Props = {
+  searchParams: Promise<{ category?: string }>;
+};
+
+export default async function HomePage({ searchParams }: Props) {
+  const { category } = await searchParams;
+
   return (
-    <main className="w-full max-w-7xl mx-auto p-6">
+    <main className="w-full max-w-7xl mx-auto p-6 mb-10">
       <div className="mb-10">
         <h1 className="text-4xl font-bold">Liquidação</h1>
 
@@ -13,7 +19,7 @@ export default function HomePage() {
         </p>
       </div>
 
-      <ProductsGrid products={products} />
+      <ProductsGrid products={products} initialCategory={category} />
     </main>
   );
 }

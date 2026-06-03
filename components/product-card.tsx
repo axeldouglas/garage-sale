@@ -77,9 +77,11 @@ export function ProductCard({ product }: Props) {
       <CardContent className="flex flex-col h-full p-4 space-y-4">
         <div>
           {product.category?.map((cat) => (
-            <Badge key={cat} variant="secondary">
-              {cat}
-            </Badge>
+            <Link key={cat} href={`/?category=${encodeURIComponent(cat)}`}>
+              <Badge variant="secondary" className="cursor-pointer hover:opacity-80 transition-opacity">
+                {cat}
+              </Badge>
+            </Link>
           ))}
           <Link href={`/products/${product.slug}`}>
             <h2 className="text-lg font-semibold hover:underline truncate">

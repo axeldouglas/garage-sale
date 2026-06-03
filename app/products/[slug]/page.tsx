@@ -136,7 +136,11 @@ export default async function ProductPage({ params }: Props) {
                 {statusLabels[product.status]}
               </Badge>
               {product.category?.map((cat) => (
-                <Badge key={cat} variant="secondary">{cat}</Badge>
+                <Link key={cat} href={`/?category=${encodeURIComponent(cat)}`}>
+                  <Badge variant="secondary" className="cursor-pointer hover:opacity-80 transition-opacity">
+                    {cat}
+                  </Badge>
+                </Link>
               ))}
             </div>
 

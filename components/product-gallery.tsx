@@ -32,7 +32,7 @@ export function ProductGallery({ product }: Props) {
   return (
     <div className="flex flex-col md:flex-row gap-4 items-start w-full">
       {/* Thumbnails */}
-      <ScrollArea className="h-[50px] w-xs order-2 md:pr-2.5 md:h-[400px] md:w-[70px] md:order-1">
+      <ScrollArea className="h-[50px] w-full order-2 md:pr-2.5 md:h-[400px] md:w-[70px] md:order-1">
         <div className="flex md:flex-col gap-3">
           {product.images.length > 0 ? (
             product.images.map((image) => {
