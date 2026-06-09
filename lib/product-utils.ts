@@ -26,8 +26,8 @@ export function formatDate(dateString: string): string {
 
 export function buildWhatsappUrl(product: Product): string {
   const message = product.availableDate
-    ? `Olá! Tenho interesse em reservar ${product.title}, disponível em ${formatDate(product.availableDate)}.`
-    : `Olá! Tenho interesse em reservar ${product.title}.`;
+    ? `Olá! Tenho interesse em reservar ${product.title}, disponível em ${formatDate(product.availableDate)}. Link para o produto: https://garage-sale-iota.vercel.app/products/${product.slug}`
+    : `Olá! Tenho interesse em reservar ${product.title}. Link para o produto: https://garage-sale-iota.vercel.app/products/${product.slug}`;
 
   return `https://wa.me/5538991511561?text=${encodeURIComponent(message)}`;
 }
@@ -47,10 +47,23 @@ export function getSimilarProducts(
   limit = 8,
 ): Product[] {
   const available = all.filter(
-    (p) => p.id !== current.id && p.status !== 'sold' && p.status !== 'reserved',
+    (p) =>
+      p.id !== current.id && p.status !== 'sold' && p.status !== 'reserved',
   );
 
-  const stopWords = new Set(['com', 'de', 'da', 'do', 'em', 'para', 'e', 'a', 'o', 'um', 'uma']);
+  const stopWords = new Set([
+    'com',
+    'de',
+    'da',
+    'do',
+    'em',
+    'para',
+    'e',
+    'a',
+    'o',
+    'um',
+    'uma',
+  ]);
   const keywords = current.title
     .toLowerCase()
     .split(/\W+/)
@@ -59,7 +72,12 @@ export function getSimilarProducts(
   const scored = available
     .map((p) => {
       let score = 0;
-      if (p.category && current.category && p.category.some((c) => current.category!.includes(c))) score += 3;
+      if (
+        p.category &&
+        current.category &&
+        p.category.some((c) => current.category!.includes(c))
+      )
+        score += 3;
       const pWords = p.title.toLowerCase().split(/\W+/);
       for (const kw of keywords) {
         if (pWords.includes(kw)) score += 1;
@@ -85,7 +103,11 @@ export function getSimilarProducts(
 
   // Pad with same-category products
   if (current.category) {
-    pad(available.filter((p) => p.category?.some((c) => current.category!.includes(c))));
+    pad(
+      available.filter((p) =>
+        p.category?.some((c) => current.category!.includes(c)),
+      ),
+    );
   }
 
   // Pad with "outros" category
