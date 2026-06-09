@@ -29,7 +29,7 @@ export function buildWhatsappUrl(product: Product): string {
     ? `Olá! Tenho interesse em reservar ${product.title}, disponível em ${formatDate(product.availableDate)}.`
     : `Olá! Tenho interesse em reservar ${product.title}.`;
 
-  return `https://wa.me/5531999999999?text=${encodeURIComponent(message)}`;
+  return `https://wa.me/5538991511561?text=${encodeURIComponent(message)}`;
 }
 
 export function getProductImageUrl(slug: string, image: string): string {
