@@ -47,7 +47,7 @@ export function ProductCard({ product }: Props) {
     <Card
       className={cn(
         'relative overflow-hidden py-0 gap-0',
-        isUnavailable && 'opacity-60',
+        isUnavailable && 'opacity-50',
       )}
     >
       {/* Floating Favorite */}
@@ -78,24 +78,35 @@ export function ProductCard({ product }: Props) {
         <div>
           {product.category?.map((cat) => (
             <Link key={cat} href={`/?category=${encodeURIComponent(cat)}`}>
-              <Badge variant="secondary" className="cursor-pointer hover:opacity-80 transition-opacity">
+              <Badge
+                variant="secondary"
+                className="cursor-pointer hover:opacity-80 transition-opacity"
+              >
                 {cat}
               </Badge>
             </Link>
           ))}
           <Link href={`/products/${product.slug}`}>
-            <h2 className="text-lg font-semibold hover:underline truncate">
+            <h2
+              className={cn('text-lg font-semibold hover:underline truncate', {
+                'line-through': isUnavailable,
+              })}
+            >
               {product.title}
             </h2>
           </Link>
 
-          <p className="text-sm text-muted-foreground mt-1 line-clamp-2">
+          <p className={cn("text-sm text-muted-foreground mt-1 line-clamp-2", {
+                'line-through': isUnavailable,
+              })}>
             {product.description}
           </p>
         </div>
 
         <div className="flex items-center gap-3">
-          <p className="text-2xl font-bold">{formatPrice(product.price)}</p>
+          <p className={cn("text-2xl font-bold", { 'line-through': isUnavailable })}>
+            {formatPrice(product.price)}
+          </p>
 
           <Tooltip>
             <TooltipTrigger>
