@@ -351,7 +351,7 @@ export const products: Product[] = [
   {
     id: '33',
     slug: 'cadeira-gamer-pichau-precisa-de-reforma',
-    title: 'Cadeira gamer Pichau',
+    title: 'Cadeira gamer Pichau (doação)',
     description:
       'Precisa de reforma. Produto em bom estado estrutural, mas com estofado danificado.',
     price: 0.0,
@@ -568,9 +568,9 @@ export const products: Product[] = [
   {
     id: '48',
     slug: 'sofa-cama-precisa-de-reforma',
-    title: 'Sofa-cama',
+    title: 'Sofa-cama (doação)',
     description:
-      'Produto em bom estado estrutural, mas com estofado danificado.',
+      'Precisa de reforma. \nProduto em bom estado estrutural, mas com estofado danificado.',
     price: 0.0,
     images: [],
     status: 'available',
