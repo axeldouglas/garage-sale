@@ -17,4 +17,5 @@ export type Product = {
   quantity?: number;
   category?: string[];
   originalLink?: string;
+  who?: string[];
 };

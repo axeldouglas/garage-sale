@@ -60,14 +60,15 @@ export const products: Product[] = [
     slug: 'lg-19-5-hd-60hz',
     title: 'Monitor LG 19.5" HD 60Hz',
     description:
-      '* Resta apenas 1 unidade disponível. Produto em ótimo estado e funcionando perfeitamente.\n\n* Os monitores possuem base para serem usados em cima da mesa',
+      '* 3 unidades. Produto em ótimo estado e funcionando perfeitamente.\n\n* Os monitores possuem base para serem usados em cima da mesa',
     price: 100.0,
     images: ['/products/monitor-lg/1.jpg', '/products/monitor-lg/2.jpg'],
-    status: 'available',
-    quantity: 2,
+    status: 'reserved',
+    quantity: 3,
     category: ['informática'],
     availableDate: '2026-07-14',
     originalLink: 'amazon',
+    // who: ['Kau', 'Zen 802', 'Vinícius 20?'],
   },
   {
     id: '5',
@@ -81,6 +82,7 @@ export const products: Product[] = [
     quantity: 1,
     category: ['informática'],
     availableDate: '2026-07-14',
+    // who: ['Tati'],
   },
   {
     id: '6',
@@ -247,6 +249,7 @@ export const products: Product[] = [
     quantity: 1,
     category: ['informática'],
     availableDate: '2026-07-14',
+    // who: ['Tio Helio'],
   },
   {
     id: '23',
@@ -256,8 +259,8 @@ export const products: Product[] = [
       'Produto em ótimo estado e funcionando perfeitamente. Precisa de trocar bateria.',
     price: 100.0,
     images: [
-      '/products/relogio-chilie-beens/1.jpg',
       '/products/relogio-chilie-beens/2.jpg',
+      '/products/relogio-chilie-beens/1.jpg',
     ],
     status: 'available',
     quantity: 1,
@@ -311,16 +314,17 @@ export const products: Product[] = [
     slug: 'hd-externo-portatil-seagate-expansion-1tb-usb-3-0',
     title: 'HD Externo Portátil Seagate Expansion 1TB USB 3.0',
     description: 'Produto em ótimo estado e funcionando perfeitamente.',
-    price: 300.0,
+    price: 250.0,
     images: [
       '/products/hd-externo-seagate/1.jpg',
       '/products/hd-externo-seagate/2.jpg',
     ],
-    status: 'available',
+    status: 'sold',
     quantity: 1,
     category: ['informática'],
     availableDate: '2026-05-27',
     originalLink: 'kabum',
+    // who: ['Madrinha Laura'],
   },
   {
     id: '27',
@@ -418,6 +422,7 @@ export const products: Product[] = [
     quantity: 1,
     category: ['informática'],
     availableDate: '2026-05-26',
+    // who: ['Tati'],
   },
   {
     id: '39',
@@ -474,6 +479,7 @@ export const products: Product[] = [
     category: ['eletrônicos'],
     availableDate: '2026-07-14',
     originalLink: 'amazon',
+    // who: ['Peu'],
   },
   {
     id: '42',
@@ -487,6 +493,7 @@ export const products: Product[] = [
     category: ['eletrônicos'],
     availableDate: '2026-07-14',
     originalLink: 'amazon',
+    // who: ['Tia Marci'],
   },
   {
     id: '43',
@@ -500,6 +507,7 @@ export const products: Product[] = [
     category: ['informática'],
     availableDate: '2026-05-27',
     originalLink: 'mercado livre',
+    // who: ['Tia Marci'],
   },
   // {
   //   id: '44',
@@ -731,18 +739,19 @@ export const products: Product[] = [
     title: 'Geladeira Brastemp Frost Free Duplex Inox',
     description:
       'Produto em bom estado. Possui marcas de uso.\n\nEspecificações:\n- Modelo BRM54HK\n- Capacidade: 385 litros\n- Frost Free: Não precisa descongelar\n- Painel Eletrônico: Controle de temperatura e funções\n- Freeze Control: Tecnologia que mantém os alimentos frescos por mais tempo\n- Design Inox',
-    price: 2000.0,
+    price: 1750.0,
     images: [
       '/products/geladeira-brastemp/1.jpg',
       '/products/geladeira-brastemp/2.jpg',
       '/products/geladeira-brastemp/3.jpg',
       '/products/geladeira-brastemp/4.jpg',
     ],
-    status: 'available',
+    status: 'reserved',
     quantity: 1,
     category: ['eletrodomésticos', 'cozinha'],
     availableDate: '2026-07-14',
     originalLink: 'casas bahia',
+    // who: ['Mari inquilina'],
   },
   {
     id: '60',
@@ -762,6 +771,7 @@ export const products: Product[] = [
     category: ['eletrodomésticos', 'cozinha'],
     availableDate: '2026-07-14',
     originalLink: 'electrolux',
+    // who: ['Peu'],
   },
   {
     id: '61',
@@ -777,11 +787,12 @@ export const products: Product[] = [
       '/products/purificador-agua-electrolux/4.jpg',
       '/products/purificador-agua-electrolux/5.jpg',
     ],
-    status: 'available',
+    status: 'reserved',
     quantity: 1,
     category: ['eletrodomésticos', 'cozinha'],
     availableDate: '2026-07-14',
     originalLink: 'amazon',
+    // who: ['Mari inquilina'],
   },
   {
     id: '62',
@@ -867,6 +878,7 @@ export const products: Product[] = [
     category: ['eletrodomésticos', 'cozinha'],
     availableDate: '2026-07-14',
     originalLink: 'olx',
+    // who: ['Tio Helio'],
   },
   {
     id: '67',
@@ -884,6 +896,7 @@ export const products: Product[] = [
     category: ['cozinha'],
     availableDate: '2026-07-14',
     originalLink: 'mercado livre',
+    // who: ['Tia Eliene'],
   },
   {
     id: '68',
@@ -896,6 +909,7 @@ export const products: Product[] = [
     quantity: 1,
     category: ['outros'],
     availableDate: '2026-07-14',
+    // who: ['Tia Dila'],
   },
   {
     id: '69',
@@ -986,6 +1000,7 @@ export const products: Product[] = [
     category: ['eletrodomésticos', 'cozinha'],
     availableDate: '2026-05-27',
     originalLink: 'amazon',
+    // who: ['Tia Rose'],
   },
   {
     id: '75',
@@ -1005,6 +1020,7 @@ export const products: Product[] = [
     category: ['eletrodomésticos'],
     availableDate: '2026-07-14',
     originalLink: 'mercado livre',
+    // who: ['Tia Marci'],
   },
   {
     id: '80',
@@ -1109,18 +1125,18 @@ export const products: Product[] = [
     category: ['outros'],
     availableDate: '2026-07-14',
   },
-  {
-    id: '89',
-    slug: 'lencol-solteiro',
-    title: 'Lençol solteiro',
-    description: 'Produto em ótimo estado e funcionando perfeitamente.',
-    price: 75.0,
-    images: [],
-    status: 'available',
-    quantity: 2,
-    category: ['cama/banho'],
-    availableDate: '2026-07-14',
-  },
+  // {
+  //   id: '89',
+  //   slug: 'lencol-solteiro',
+  //   title: 'Lençol solteiro',
+  //   description: 'Produto em ótimo estado e funcionando perfeitamente.',
+  //   price: 75.0,
+  //   images: [],
+  //   status: 'available',
+  //   quantity: 2,
+  //   category: ['cama/banho'],
+  //   availableDate: '2026-07-14',
+  // },
   {
     id: '91',
     slug: 'escada-aluminio-4-degraus',
@@ -1136,6 +1152,7 @@ export const products: Product[] = [
     category: ['construção', 'ferramentas'],
     availableDate: '2026-07-14',
     originalLink: 'amazon',
+    // who: ['Tio Helio'],
   },
   {
     id: '92',
@@ -1175,6 +1192,7 @@ export const products: Product[] = [
     category: ['outros'],
     availableDate: '2026-07-14',
     originalLink: 'amazon',
+    // who: ['Tia Rose'],
   },
   {
     id: '95',
@@ -1208,6 +1226,7 @@ export const products: Product[] = [
     category: ['infantil'],
     availableDate: '2026-05-26',
     originalLink: 'hi happy',
+    // who: ['Mãe'],
   },
   {
     id: '97',
@@ -1325,6 +1344,7 @@ export const products: Product[] = [
     category: ['informática'],
     availableDate: '2026-05-26',
     originalLink: 'amazon',
+    // who: ['Tia Marci'],
   },
   // {
   //   id: '105',
@@ -1382,6 +1402,7 @@ export const products: Product[] = [
     category: ['cozinha'],
     availableDate: '2026-05-27',
     originalLink: 'amazon',
+    // who: ['Regina'],
   },
   {
     id: '109',
@@ -1588,6 +1609,7 @@ export const products: Product[] = [
     category: ['cozinha'],
     availableDate: '2026-07-14',
     originalLink: 'amazon',
+    // who: ['Tia Marci??'],
   },
   {
     id: '127',
@@ -1707,6 +1729,7 @@ export const products: Product[] = [
     quantity: 1,
     category: ['informática'],
     availableDate: '2026-05-26',
+    // who: ['Mateus 801'],
   },
   {
     id: '134',
@@ -1720,6 +1743,7 @@ export const products: Product[] = [
     quantity: 1,
     category: ['construção', 'ferramentas'],
     availableDate: '2026-07-26',
+    // who: ['Tio Helio'],
   },
   {
     id: '135',
@@ -1757,6 +1781,51 @@ export const products: Product[] = [
     status: 'available',
     quantity: 1,
     category: ['casa', 'outros'],
-    availableDate: '2026-07-14',
+    availableDate: '2026-05-14',
+  },
+  {
+    id: '138',
+    slug: 'pregadores-de-roupa',
+    title: 'Pregadores de roupa de plástico',
+    description: '60 unidades. Produto na embalagem.',
+    price: 10.0,
+    images: [
+      '/products/pregadores/1.jpg',
+      '/products/pregadores/2.jpg',
+    ],
+    status: 'available',
+    quantity: 1,
+    category: ['casa', 'outros'],
+    availableDate: '2026-05-14',
+  },
+  {
+    id: '139',
+    slug: 'passadeira-vapor',
+    title: 'Passadeira a vapor',
+    description: 'Passadeira a vapor Vp-01 Steam Premium Preta Mondial.\nAcompanha acessórios para remover fiapos e bolinhas. \nCom capacidade de 250ml. \n* Apresenta oxidação na parte interna do reservatório, mas funciona normalmente e não apresenta vazamentos.',
+    price: 50.0,
+    images: [
+      '/products/passadeira-vapor/1.jpg',
+      '/products/passadeira-vapor/2.jpg',
+    ],
+    status: 'available',
+    quantity: 1,
+    category: ['casa', 'eletrodomésticos'],
+    availableDate: '2026-05-14',
+  },
+  {
+    id: '140',
+    slug: 'refil-sbp-repelente-eletrico-liquido',
+    title: 'Refil SBP repelente elétrico líquido',
+    description: 'Contem 3 refis. Produto nunca usado.\nAcompanha suporte para colocar o refil e ligar na tomada (usado).',
+    price: 10.0,
+    images: [
+      '/products/refil-sbp-repelente/1.jpg',
+      '/products/refil-sbp-repelente/2.jpg',
+    ],
+    status: 'available',
+    quantity: 1,
+    category: ['casa', 'outros'],
+    availableDate: '2026-05-14',
   },
 ];
