@@ -13,9 +13,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const product = products.find((p) => p.slug === slug);
   if (!product) return {};
 
-  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL ?? '';
   const imageUrl = product.images[0]
-    ? `${baseUrl}/products/${product.slug}/${product.images[0]}`
+    ? `/products/${product.slug}/${product.images[0]}`
     : undefined;
 
   return {
@@ -24,7 +23,16 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     openGraph: {
       title: product.title,
       description: product.description,
-      ...(imageUrl && { images: [{ url: imageUrl }] }),
+      type: 'website',
+      ...(imageUrl && {
+        images: [
+          {
+            url: imageUrl,
+            width: 1200,
+            height: 630,
+          },
+        ],
+      }),
     },
     twitter: {
       card: 'summary_large_image',
@@ -90,7 +98,6 @@ export default async function ProductPage({ params }: Props) {
   const isUnavailable =
     product.status === 'reserved' || product.status === 'sold';
 
-
   const filteredAvailableProducts = [...products].filter(
     (product) => product.status !== 'sold' && product.status !== 'reserved',
   );
@@ -145,7 +152,10 @@ export default async function ProductPage({ params }: Props) {
               </Badge>
               {product.category?.map((cat) => (
                 <Link key={cat} href={`/?category=${encodeURIComponent(cat)}`}>
-                  <Badge variant="secondary" className="cursor-pointer hover:opacity-80 transition-opacity">
+                  <Badge
+                    variant="secondary"
+                    className="cursor-pointer hover:opacity-80 transition-opacity"
+                  >
                     {cat}
                   </Badge>
                 </Link>

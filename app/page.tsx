@@ -10,6 +10,7 @@ export async function generateMetadata(): Promise<Metadata> {
     openGraph: {
       title: 'Venda de Garagem',
       description: 'Encontre móveis, eletrônicos e muito mais em nossa venda de garagem.',
+      type: 'website',
     },
     twitter: {
       card: 'summary_large_image',
