@@ -55,6 +55,12 @@ export function ProductsGrid({ products, initialCategory }: Props) {
     );
   }, [products]);
 
+  const filteredUnavailableProducts = useMemo(() => {
+    return [...products].filter(
+      (product) => product.status === 'sold' || product.status === 'reserved',
+    );
+  }, [products]);
+
   const filteredProducts = useMemo(() => {
     return [...products]
       .filter((product) => {
@@ -69,9 +75,15 @@ export function ProductsGrid({ products, initialCategory }: Props) {
           ? favorites.has(product.id)
           : true;
 
-        return matchesSearch && matchesCategory && matchesFavorites;
-      })
+        const matchesAvailability = product.status !== 'sold' && product.status !== 'reserved';
 
+        return (
+          matchesSearch &&
+          matchesCategory &&
+          matchesFavorites &&
+          matchesAvailability
+        );
+      })
       .sort((a, b) => {
         const statusComparison = statusOrder[a.status] - statusOrder[b.status];
 
@@ -140,6 +152,17 @@ export function ProductsGrid({ products, initialCategory }: Props) {
           <ProductCard key={product.id} product={product} />
         ))}
       </div>
+
+      <details className="rounded-md border p-3 text-xs">
+        <summary className="cursor-pointer text-sm font-medium">
+          Produtos vendidos ou reservados
+        </summary>
+        <div className="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-4 gap-6 mt-6">
+          {filteredUnavailableProducts.map((product) => (
+            <ProductCard key={product.id} product={product} />
+          ))}
+        </div>
+      </details>
     </div>
   );
 }
