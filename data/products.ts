@@ -924,23 +924,23 @@ export const products: Product[] = [
     category: ['cozinha'],
     availableDate: '2026-07-14',
   },
-  {
-    id: '70',
-    slug: 'frigideira-verdemar',
-    title: 'Frigideira Verdemar',
-    description:
-      'Frigideiras compradas na promoção do Verdemar. Possui marcas de uso.',
-    price: 40.0,
-    images: [
-      '/products/frigideira-verdemar/1.jpg',
-      '/products/frigideira-verdemar/2.jpg',
-      '/products/frigideira-verdemar/3.jpg',
-    ],
-    status: 'available',
-    quantity: 2,
-    category: ['cozinha'],
-    availableDate: '2026-07-14',
-  },
+  // {
+  //   id: '70',
+  //   slug: 'frigideira-verdemar',
+  //   title: 'Frigideira Verdemar',
+  //   description:
+  //     'Frigideiras compradas na promoção do Verdemar. Possui marcas de uso.',
+  //   price: 40.0,
+  //   images: [
+  //     '/products/frigideira-verdemar/1.jpg',
+  //     '/products/frigideira-verdemar/2.jpg',
+  //     '/products/frigideira-verdemar/3.jpg',
+  //   ],
+  //   status: 'available',
+  //   quantity: 2,
+  //   category: ['cozinha'],
+  //   availableDate: '2026-07-14',
+  // },
   {
     id: '71',
     slug: 'lavadora-de-roupas-brastemp-bwk14ab-14kg',

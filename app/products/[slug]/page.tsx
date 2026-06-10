@@ -34,6 +34,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     },
   };
 }
+
 import {
   statusStyles,
   statusLabels,
@@ -89,12 +90,19 @@ export default async function ProductPage({ params }: Props) {
   const isUnavailable =
     product.status === 'reserved' || product.status === 'sold';
 
+
+  const filteredAvailableProducts = [...products].filter(
+    (product) => product.status !== 'sold' && product.status !== 'reserved',
+  );
+
   return (
     <main className="max-w-7xl mx-auto p-6 mb-20">
       <div className="mb-6 md:mb-10">
-        <h1 className="text-4xl font-bold">Liquidação</h1>
-
-        <p className="text-zinc-600 mt-2">Móveis, eletrônicos e muito mais.</p>
+        <h1 className="text-4xl font-bold">Venda de Garagem</h1>
+        <p className="text-muted-foreground mt-2">
+          {filteredAvailableProducts.length} itens disponíveis entre móveis,
+          eletrônicos e muito mais.
+        </p>
       </div>
 
       {/* Breadcrumbs */}
