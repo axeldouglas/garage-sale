@@ -1628,11 +1628,12 @@ export const products: Product[] = [
       '/products/escada-aluminio-3-degraus/1.jpg',
       '/products/escada-aluminio-3-degraus/2.jpg',
     ],
-    status: 'available',
+    status: 'reserved',
     quantity: 2,
     category: ['construção', 'ferramentas'],
     availableDate: '2026-07-14',
     originalLink: 'amazon',
+    who: ['Dona Elza'],
   },
   {
     id: '128',
