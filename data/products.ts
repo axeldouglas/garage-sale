@@ -69,7 +69,7 @@ export const products: Product[] = [
     category: ['informática'],
     availableDate: '2026-07-14',
     originalLink: 'amazon',
-    // who: ['Kau', 'Zen 802', 'Vinícius 20?'],
+    who: ['Kau', 'Zen 802', 'Vinícius 20?'],
   },
   {
     id: '5',
@@ -105,7 +105,7 @@ export const products: Product[] = [
     category: ['informática'],
     availableDate: '2026-07-14',
     originalLink: 'mercado livre',
-    who: ['Yasmim MRV?', 'Marcos Café 605'],
+    who: ['Yasmim MRV? +55 31 8102-7119', 'Marcos Café 605'],
   },
   {
     id: '7',
@@ -144,7 +144,7 @@ export const products: Product[] = [
     quantity: 1,
     category: ['informática'],
     availableDate: '2026-07-14',
-    who: ['Guilherme MRV'],
+    who: ['Guilherme Ramos MRV +55 31 9477-0417'],
   },
   {
     id: '9',
@@ -271,7 +271,7 @@ export const products: Product[] = [
     quantity: 1,
     category: ['outros'],
     availableDate: '2026-05-26',
-    who: ['Bruna MRV'],
+    who: ['Bruna MRV +55 31 9372-5146'],
   },
   {
     id: '24',
@@ -370,7 +370,7 @@ export const products: Product[] = [
     quantity: 1,
     category: ['mobilia'],
     availableDate: '2026-07-14',
-    who: ['João Pedro MRV'],
+    who: ['João Pedro MRV +55 31 7325-8877'],
   },
   {
     id: '34',
@@ -437,7 +437,7 @@ export const products: Product[] = [
     title: "Ultrabook LG 14'' Intel Core i5",
     description:
       "Produto em bom estado. Há marcas de uso. \n\nEspecificações: \n- Ultrabook LG série U460 14''\n- Processador Intel Core i5\n- 8GB RAM**\n- 512GB HD**",
-    price: 300.0,
+    price: 0.0,
     images: [
       '/products/ultrabook-lg/1.jpg',
       '/products/ultrabook-lg/2.jpg',
@@ -447,7 +447,7 @@ export const products: Product[] = [
     quantity: 1,
     category: ['informática'],
     availableDate: '2026-05-26',
-    who: ['Bruna MRV ou Zen 802'],
+    who: ['Bruna MRV +55 31 9372-5146'],
   },
   {
     id: '40',
@@ -595,6 +595,7 @@ export const products: Product[] = [
     quantity: 1,
     category: ['mobilia'],
     availableDate: '2026-07-14',
+    who: ['Guilherme MRV? +55 31 7594-9031']
   },
   {
     id: '49',
@@ -609,7 +610,7 @@ export const products: Product[] = [
     category: ['esportes'],
     availableDate: '2026-07-14',
     originalLink: 'mercado livre',
-    who: ['Julia (Cleiton MRV)'],
+    who: ['Julia (Cleiton MRV) +55 31 9356-8824'],
   },
   {
     id: '50',
@@ -630,7 +631,7 @@ export const products: Product[] = [
     category: ['mobilia'],
     availableDate: '2026-07-14',
     originalLink: 'casavee',
-    who: ['Julia (Cleiton MRV)'],
+    who: ['Julia (Cleiton MRV) +55 31 9356-8824'],
   },
   {
     id: '51',
@@ -645,7 +646,7 @@ export const products: Product[] = [
     category: ['outros'],
     availableDate: '2026-07-14',
     originalLink: 'amazon',
-    who: ['Yasmim MRV?'],
+    who: ['Yasmim MRV? +55 31 8102-7119'],
   },
   {
     id: '52',
@@ -873,7 +874,7 @@ export const products: Product[] = [
     quantity: 1,
     category: ['outros'],
     availableDate: '2026-07-14',
-    who: ['Yasmim MRV?'],
+    who: ['Yasmim MRV? +55 31 8102-7119'],
   },
   {
     id: '66',
@@ -887,12 +888,12 @@ export const products: Product[] = [
       '/products/microondas-electrolux/2.jpg',
       '/products/microondas-electrolux/3.jpg',
     ],
-    status: 'reserved',
+    status: 'sold',
     quantity: 1,
     category: ['eletrodomésticos', 'cozinha'],
     availableDate: '2026-07-14',
     originalLink: 'olx',
-    // who: ['Tio Helio'],
+    who: ['Tio Helio'],
   },
   {
     id: '67',
@@ -937,6 +938,7 @@ export const products: Product[] = [
     quantity: 1,
     category: ['cozinha'],
     availableDate: '2026-07-14',
+    who: ['Regina'],
   },
   // {
   //   id: '70',
@@ -962,11 +964,12 @@ export const products: Product[] = [
     description: 'Produto em bom estado e funcionando perfeitamente.',
     price: 1300.0,
     images: [],
-    status: 'available',
+    status: 'reserved',
     quantity: 1,
     category: ['eletrodomésticos'],
     availableDate: '2026-07-14',
     originalLink: 'brastemp',
+    who: ['Gustavo MRV +55 31 9148-9530'],
   },
   {
     id: '72',
@@ -979,6 +982,7 @@ export const products: Product[] = [
     quantity: 1,
     category: ['mobilia'],
     availableDate: '2026-07-14',
+    who: ['Casa Viva +55 31 9760-9762'],
   },
   {
     id: '73',
@@ -1138,7 +1142,7 @@ export const products: Product[] = [
     quantity: 2,
     category: ['outros'],
     availableDate: '2026-07-14',
-    who: ['Julia (Cleiton MRV)'],
+    who: ['Julia (Cleiton MRV) +55 31 9356-8824'],
   },
   // {
   //   id: '89',
@@ -1412,12 +1416,12 @@ export const products: Product[] = [
       '/products/potes-hermeticos/2.jpg',
       '/products/potes-hermeticos/3.jpg',
     ],
-    status: 'reserved',
+    status: 'sold',
     quantity: 1,
     category: ['cozinha'],
     availableDate: '2026-05-27',
     originalLink: 'amazon',
-    // who: ['Regina'],
+    who: ['Regina'],
   },
   {
     id: '109',
@@ -1745,11 +1749,11 @@ export const products: Product[] = [
     description: 'Na caixa. Nunca usado.\nModelo k800',
     price: 50.0,
     images: ['/products/edifier-headset-usb/1.jpg'],
-    status: 'reserved',
+    status: 'sold',
     quantity: 1,
     category: ['informática'],
     availableDate: '2026-05-26',
-    // who: ['Mateus 801'],
+    who: ['Mateus 801'],
   },
   {
     id: '134',
@@ -1803,6 +1807,7 @@ export const products: Product[] = [
     quantity: 1,
     category: ['casa', 'outros'],
     availableDate: '2026-05-14',
+    who: ['Amanda']
   },
   {
     id: '138',
@@ -1833,7 +1838,7 @@ export const products: Product[] = [
     quantity: 1,
     category: ['casa', 'eletrodomésticos'],
     availableDate: '2026-05-14',
-    who: ['Vanessa MRV'],
+    who: ['Vanessa MRV +55 31 9086-7203'],
   },
   {
     id: '140',
