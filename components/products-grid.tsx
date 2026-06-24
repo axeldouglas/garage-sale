@@ -49,18 +49,6 @@ export function ProductsGrid({ products, initialCategory }: Props) {
     router.replace(params);
   };
 
-  const categories = useMemo(() => {
-    return Array.from(
-      new Set(products.flatMap((p) => p.category ?? []).filter(Boolean)),
-    );
-  }, [products]);
-
-  const filteredUnavailableProducts = useMemo(() => {
-    return [...products].filter(
-      (product) => product.status === 'sold' || product.status === 'reserved',
-    );
-  }, [products]);
-
   const filteredProducts = useMemo(() => {
     return [...products]
       .filter((product) => {
@@ -101,6 +89,53 @@ export function ProductsGrid({ products, initialCategory }: Props) {
         return 0;
       });
   }, [products, search, category, onlyFavorites, favorites]);
+
+  const filteredUnavailableProducts = useMemo(() => {
+    return [...products]
+      .filter((product) => {
+        const matchesSearch =
+          product.title.toLowerCase().includes(search.toLowerCase()) ||
+          product.description?.toLowerCase().includes(search.toLowerCase());
+
+        const matchesCategory =
+          category === 'all' ? true : product?.category?.includes(category);
+
+        const matchesFavorites = onlyFavorites
+          ? favorites.has(product.id)
+          : true;
+
+        const matchesAvailability = product.status === 'sold' || product.status === 'reserved';
+
+        return (
+          matchesSearch &&
+          matchesCategory &&
+          matchesFavorites &&
+          matchesAvailability
+        );
+      })
+      .sort((a, b) => {
+        const statusComparison = statusOrder[a.status] - statusOrder[b.status];
+
+        if (statusComparison !== 0) {
+          return statusComparison;
+        }
+
+        if (a.availableDate && b.availableDate) {
+          return (
+            new Date(a.availableDate).getTime() -
+            new Date(b.availableDate).getTime()
+          );
+        }
+
+        return 0;
+      });
+  }, [products, search, category, onlyFavorites, favorites]);
+
+  const categories = useMemo(() => {
+    return Array.from(
+      new Set(filteredProducts.flatMap((p) => p.category ?? []).filter(Boolean)),
+    );
+  }, [filteredProducts]);
 
   return (
     <div className="space-y-6">
