@@ -483,11 +483,12 @@ export const products: Product[] = [
       '/products/smart-tv/2.jpg',
       '/products/smart-tv/3.jpg',
     ],
-    status: 'available',
+    status: 'reserved',
     quantity: 1,
     category: ['eletrônicos'],
     availableDate: '2026-07-14',
     originalLink: 'amazon',
+    who: ['Waguim 304'],
   },
   {
     id: '42',
